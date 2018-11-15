@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="./main.js"></script>
+  <title>test-Zinit</title>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="header__top">
+        <div class="header__logo"></div>
+        <form>
+          <div class="header__search">
+            <input type="search" name="" id="" placeholder="Type in to Search...">
+            <input type="submit" value="">
+          </div>
+        </form>
+        <div class="header__user">
+          <div class="header__user-login">
+            <img src="./assets/icons/account.png" alt="">
+            <p>Login</p>
+          </div>
+          <div class="header__user-bag">
+            <img src="./assets/icons/bag.png" alt="">
+            <p>My Bag</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="nav">
+        <a href="#">Articles</a>
+        <a href="#">Our Jobs</a>
+        <a href="#">Deals </a>
+        <a href="#">Fresh News</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+        <a href="#">Our Shop</a>
+        <a href="#">Sale</a>
+      </div>
+      <div class="nav__switch-font-size">
+        <div class="nav__switch-font-size-9">A</div>
+        <div class="nav__switch-font-size-12">A</div>
+        <div class="nav__switch-font-size-14">A</div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="main__slider" id="slide">
+      <!-- <div class="slide"></div> -->
+      <div class="main__slider-arrow-left" id="left" onclick="showPrevSlide()"></div>
+      <div class="main__slider-content">
+        <div class="main__slider-h2">Workspace</div>
+        <div class="main__slider-p">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+          <p> do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        </div>
+        <div class="main__slider-dots">
+          <div class="main__slider-dots-left" id="dots-left" onclick="showPrevSlide()"></div>
+          <div class="main__slider-dots-center" id="dots" onclick="showCenterSlide()"></div>
+          <div class="main__slider-dots-right" id="dots-right" onclick="showNextSlide()"></div>
+        </div>
+      </div>
+      <div class="main__slider-arrow-right" id="right" onclick='showNextSlide()'></div>
+    </div>
+    <div class="main__h2">Latest News</div>
+    <div class="main__news-grid ">
+      <div class="main__news-grid-item">
+        <div class="main__news-grid-item__img">
+          <img src="./assets/image/photo-1434494878577-86c23bcb06b9.png" alt="">
+        </div>
+        <div class="main__news-grid-item__description">
+          <div class="main__news-grid-item__h3">SMART WATCHES</div>
+          <div class="main__news-grid-item__p">
+            <p> Lorem ipsum dolor sit amet,</p>
+            <p> consectetur adipisicing elit, sed do</p>
+            <p> eiusmod tempor incididunt.</p>
+          </div>
+          <div class="main__news-grid-item__button">
+            <button>Read More</button>
+          </div>
+        </div>
+      </div>
+      <div class="main__news-grid-item">
+        <div class="main__news-grid-item__img">
+          <img src="./assets/image/2942.png" alt="">
+        </div>
+        <div class="main__news-grid-item__description">
+          <div class="main__news-grid-item__h3">POPULAR DESIGN NEWS</div>
+          <div class="main__news-grid-item__p">
+            <p> Lorem ipsum dolor sit amet,</p>
+            <p> consectetur adipisicing elit, sed do</p>
+            <p> eiusmod tempor incididunt.</p>
+          </div>
+          <div class="main__news-grid-item__button">
+            <button>Read More</button>
+          </div>
+        </div>
+      </div>
+      <div class="main__news-grid-item">
+
+        <div class="main__news-grid-item__description">
+          <div class="main__news-grid-item__h3">20 BEST NEW WEBSITES</div>
+          <div class="main__news-grid-item__p">
+            <p> Lorem ipsum dolor sit amet,</p>
+            <p> consectetur adipisicing elit, sed do</p>
+            <p> eiusmod tempor incididunt.</p>
+          </div>
+          <div class="main__news-grid-item__button">
+            <button>Weiterlesen</button>
+          </div>
+        </div>
+        <div class="main__news-grid-item__img">
+          <img src="./assets/image/coffee-laptop-notebook-working.png" alt="">
+        </div>
+      </div>
+      <div class="main__news-grid-item">
+
+        <div class="main__news-grid-item__description">
+          <div class="main__news-grid-item__h3">WAT'S NEW</div>
+          <div class="main__news-grid-item__p">
+            <p> Lorem ipsum dolor sit amet,</p>
+            <p> consectetur adipisicing elit, sed do</p>
+            <p> eiusmod tempor incididunt.</p>
+          </div>
+          <div class="main__news-grid-item__button">
+            <button>Weiterlesen</button>
+          </div>
+        </div>
+        <div class="main__news-grid-item__img">
+          <img src="./assets/image/1837.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="main__parallax">
+      <div class="main__parallax-h2">Our Vision</div>
+      <div class="main__parallax-p">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+        <p> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="main__parallax-handshake"></div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer__slogan-line">
+      <div class="footer__slogan-line-img"></div>
+      <div class="footer__slogan-line-h3">LET THEM DECIDE!&nbsp; </div>
+      <p> Pick out a <a href="">Gift Card </a>and give them choice!</p>
+    </div>
+    <div class="footer__section">
+      <div class="footer__section-item">
+        <div class="footer__section-h3">HELP & CONTACT</div>
+        <a href="#">Help</a>
+        <a href="#">Payment Methods</a>
+        <a href="#">Voucher Information</a>
+        <a href="#">Customer Service</a>
+      </div>
+      <div class="footer__section-item">
+        <div class="footer__section-h3">BUSINESS </div>
+        <a href="#">About Us </a>
+        <a href="#">Partnerprogramm</a>
+        <a href="#">Jobs</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer__section-item">
+        <div class="footer__section-h3">TOP CATEGORIES</div>
+        <a href="#">Contact Us</a>
+        <a href="#">Buy Gift Vouchers</a>
+        <a href="#">Voucher Information</a>
+        <a href="#">Student Discount</a>
+      </div>
+      <div class="footer__section-item">
+        <div class="footer__section-h3">ACCOUNT</div>
+        <a href="#">
+          <div class="on">+</div>Your Account
+        </a>
+        <a href="#">
+          <div class="on">+</div>Order Status
+        </a>
+        <a href="#">
+          <div class="on">+</div>Wish List
+        </a>
+        <a href="#">
+          <div class="on">+</div>Live Chat
+        </a>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <div class="footer__copyright-logo"></div>
+      <p>© Copyright Workspace & Co, All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
