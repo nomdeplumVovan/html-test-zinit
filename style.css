@@ -170,6 +170,53 @@ nav a:nth-child(8) {
   font-weight: 700;
 }
 
+.nav__tablet {
+  display: none;
+}
+
+.nav__tablet-icon {
+  background-image: url(./assets/icons/menu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+}
+
+.nav__tablet-icon:hover {
+  background-color: #dceef7;  
+  width: 100px;
+  height: 160px;
+  margin-top: 140px;
+}
+
+.nav__tablet-icon:hover ul {
+  display: block;
+
+}
+
+ul {
+  display: none;
+  z-index: 60;
+  color: #0099d2;
+  background-color: #dceef7;
+  position: relative;
+  width: 100px;
+  height: 160px;
+
+}
+
+li {
+  z-index: 60;
+  width: 100px;
+ }
+
+ li a:hover{
+  color: #0099d2;
+ }
+
+
+
 /*-----main-------- */
 main {
   display: flex;
@@ -190,9 +237,6 @@ main {
   height: 450px;
 }
 
-/* .slide{
-  
-} */
 .main__slider-arrow-right,
 .main__slider-arrow-left {
   z-index: 10;
@@ -354,6 +398,8 @@ main {
   justify-content: stretch;
   background-image: url(./assets/image/bench-accounting-49909.png);
   background-repeat: repeat;
+  background-position: top center;
+  background-size: cover;
   width: 1230px;
   height: 342px;
 }
@@ -427,6 +473,7 @@ main {
   align-items: flex-start;
   justify-content: stretch;
   border-top: 1px solid #f0f0f0;
+  background-color: #fff;
   width: 1230px;
   height: 208px;
 }
@@ -541,4 +588,64 @@ a div {
 
 .parallax__layer--deep {
   transform: translateZ(-2px) scale(3);
+}
+
+@media (max-width:780px) {
+  body {
+    width: 765px;
+    min-height: 2327px;
+  }
+/* --header */
+  .header {
+    width: 765px;
+  }
+
+  .header__search,
+  input[type='search'] {
+    width: 330px;
+  }
+
+  .header__user-bag {
+    max-width: 62px;
+  }
+
+  nav {
+    width: 765px;
+    justify-content: space-between;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav__tablet {
+    display: block;
+  }
+  .nav__switch-font-size{
+    margin-right: 30px;
+  }
+/* --main-- */
+.main__slider{
+  width: 765px;
+}
+.main__news-grid{
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.main__parallax{
+  width: 765px;
+}
+/* --footer-- */
+.footer__slogan-line,
+.footer__section,
+.footer__copyright {
+  width: 765px;
+}
+.footer__section{
+  min-height: 208px;
+}
+.footer__section-item{
+  margin-right: 30px !important;
+}
 }
