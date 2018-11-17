@@ -215,6 +215,7 @@ ul {
 
 li {
   z-index: 60;
+  list-style-type: none;
   width: 100px;
 }
 
