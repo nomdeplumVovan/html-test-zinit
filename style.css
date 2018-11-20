@@ -213,7 +213,7 @@ ul {
   color: #0099d2;
   background-color: #dceef7;
   position: relative;
-  width: 100px;
+  min-width: 100px;
   min-height: 160px;
 }
 
@@ -366,6 +366,15 @@ main {
   filter: alpha(opacity=0);
   transform: rotateX(90deg);
 }
+/* .opacity {
+
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: rotateX(90deg);
+} */
+
+
+
 
 .main__news-grid-item__img,
 .main__news-grid-item__description {

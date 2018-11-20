@@ -68,7 +68,7 @@ function showPrevSlide() {
 
 function changeFontSize10() {
 
-  document.documentElement.style.fontSize = '62.5%'; 
+  document.documentElement.style.fontSize = '62.5%';
 
   document.getElementById('size10').
   style.backgroundImage = 'url(./assets/icons/activeFontSize.png)';
@@ -104,6 +104,31 @@ function changeFontSize14() {
   document.getElementById('size12').
   style.backgroundImage = document.getElementById('size10').
   style.backgroundImage = 'none';
-  
+
+  return;
+}
+
+window.onload = timerId();
+var timerFull, timerNone;
+var opasityFull = 'transition: all 6s; opacity: 1; filter: alpha(opacity=100);transform: rotateX(0deg);'
+
+var opacityNone = ' transition: all 6s; opacity: 0;filter: alpha(opacity=0); transform: rotateX(90deg);'
+
+function timerId() {
+
+  timerNone = setInterval(function () {
+    document.getElementById('imgNews1').style = opacityNone;
+  }, 6000);
+
+  timerFull = setInterval(function () {
+    document.getElementById('imgNews1').style = opasityFull;
+  }, 12000);
+ 
+};
+
+function opasityStop() {
+  clearInterval(timerFull);
+  clearInterval(timerNone);
+  document.getElementById('imgNews1').style = opasityFull;
   return;
 }
