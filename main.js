@@ -64,16 +64,46 @@ function showPrevSlide() {
   }
 }
 
+
+
 function changeFontSize10() {
-   return document.documentElement.style.fontSize = '62.5%';
+
+  document.documentElement.style.fontSize = '62.5%'; 
+
+  document.getElementById('size10').
+  style.backgroundImage = 'url(./assets/icons/activeFontSize.png)';
+
+  document.getElementById('size12').
+  style.backgroundImage = document.getElementById('size14').
+  style.backgroundImage = 'none';
+
+  return;
 }
 
 function changeFontSize12() {
-   return document.documentElement.style.fontSize = '75%';
+
+  document.documentElement.style.fontSize = '75%';
+
+  document.getElementById('size12').
+  style.backgroundImage = 'url(./assets/icons/activeFontSize.png)';
+
+  document.getElementById('size10').
+  style.backgroundImage = document.getElementById('size14').
+  style.backgroundImage = 'none';
+
+  return;
 }
 
 function changeFontSize14() {
 
-   return document.documentElement.style.fontSize = '87.5%';
-}
+  document.documentElement.style.fontSize = '87.5%';
 
+  document.getElementById('size14').
+  style.backgroundImage = 'url(./assets/icons/activeFontSize.png)';
+
+  document.getElementById('size12').
+  style.backgroundImage = document.getElementById('size10').
+  style.backgroundImage = 'none';
+  
+  return;
+}

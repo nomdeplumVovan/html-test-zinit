@@ -145,7 +145,7 @@ nav a:hover {
   width: 106px;
 }
 
-.nav__switch-font-size-9,
+.nav__switch-font-size-10,
 .nav__switch-font-size-12,
 .nav__switch-font-size-14 {
   display: flex;
@@ -156,7 +156,7 @@ nav a:hover {
   height: 28px;
   cursor: pointer;
 }
-.nav__switch-font-size-9:hover,
+.nav__switch-font-size-10:hover,
 .nav__switch-font-size-12:hover,
 .nav__switch-font-size-14:hover{
   color: #fff;
@@ -164,6 +164,7 @@ nav a:hover {
   border-radius: 50%;
   background-color: #0099d2;
 }
+
 
 
 .nav__switch-font-size-9 {
