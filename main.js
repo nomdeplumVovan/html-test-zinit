@@ -110,9 +110,9 @@ function changeFontSize14() {
 
 window.onload = timerId();
 var timerFull, timerNone;
-var opasityFull = 'transition: all 6s; opacity: 1; filter: alpha(opacity=100);transform: rotateX(0deg);'
+var opasityFull = '-webkit-transition: all 6s; -webkit-transition: -webkit-transform: rotateX(0deg); transition: all 6s; opacity: 1; filter: alpha(opacity=100);transform: rotateX(0deg);'
 
-var opacityNone = ' transition: all 6s; opacity: 0;filter: alpha(opacity=0); transform: rotateX(90deg);'
+var opacityNone = '-webkit-transition: all 6s; -webkit-transition: -webkit-transform: rotateX(90deg); transition: all 6s; opacity: 0;filter: alpha(opacity=0); transform: rotateX(90deg);'
 
 function timerId() {
 
