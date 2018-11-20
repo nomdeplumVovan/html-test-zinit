@@ -214,7 +214,7 @@ ul {
   background-color: #dceef7;
   position: relative;
   width: 100px;
-  height: 160px;
+  min-height: 160px;
 }
 
 li {
