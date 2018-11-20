@@ -40,13 +40,13 @@ function showNextSlide() {
     borderColor = '#919191';
 
   } else {
-  return showCenterSlide();
+    return showCenterSlide();
   }
 }
 
 function showPrevSlide() {
   count--;
-  
+
   if (count < 1) {
     document.getElementById('left').style.visibility = 'hidden';
 
@@ -56,11 +56,24 @@ function showPrevSlide() {
     document.getElementById('dots-left').style.borderColor = '#0099d2';
 
     document.getElementById('dots-right').style.
-    borderColor =document.getElementById('dots').style.
+    borderColor = document.getElementById('dots').style.
     borderColor = '#919191';
-    
+
   } else {
     return showCenterSlide();
   }
+}
+
+function changeFontSize10() {
+   return document.documentElement.style.fontSize = '62.5%';
+}
+
+function changeFontSize12() {
+   return document.documentElement.style.fontSize = '75%';
+}
+
+function changeFontSize14() {
+
+   return document.documentElement.style.fontSize = '87.5%';
 }
 
