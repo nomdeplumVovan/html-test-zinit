@@ -698,6 +698,9 @@ a div {
   }
 
   /* -header-- */
+  .header {
+    height: 270px; 
+  }
   .header__top {
     flex-direction: column;
     justify-content: space-around;
