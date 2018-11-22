@@ -109,10 +109,12 @@ function changeFontSize14() {
 }
 
 window.onload = timerId();
-var timerFull, timerNone;
-var opasityFull = '-webkit-transition: all 6s; -webkit-transition: -webkit-transform: rotateX(0deg); transition: all 6s; opacity: 1; filter: alpha(opacity=100);transform: rotateX(0deg);'
 
-var opacityNone = '-webkit-transition: all 6s; -webkit-transition: -webkit-transform: rotateX(90deg); transition: all 6s; opacity: 0;filter: alpha(opacity=0); transform: rotateX(90deg);'
+var timerFull, timerNone;
+
+var opasityFull = '-webkit-transition: all 6s; -webkit-transform: rotateX(0deg); transition: all 6s; opacity: 1; filter: alpha(opacity=100);transform: rotateX(0deg);'
+
+var opacityNone = '-webkit-transition: all 6s; -webkit-transform: rotateX(90deg); transition: all 6s; opacity: 0; filter: alpha(opacity=0); transform: rotateX(90deg);'
 
 function timerId() {
 
@@ -127,8 +129,11 @@ function timerId() {
 };
 
 function opasityStop() {
+
   clearInterval(timerFull);
   clearInterval(timerNone);
+
   document.getElementById('imgNews1').style = opasityFull;
+
   return;
 }

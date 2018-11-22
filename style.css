@@ -4,7 +4,7 @@
 }
 
 html {
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   font-size: 62.5%;
 }
 
@@ -20,6 +20,7 @@ body {
 /* --header-- */
 .header {
   width: 1230px;
+  height: 117px;
 }
 
 .header__top {
