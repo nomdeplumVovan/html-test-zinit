@@ -1,44 +1,37 @@
-// const next = document.getElementById('right');
-// const prev = document.getElementById('left');
-// const slide = document.getElementById('slide');
-// const dotsRight = document.getElementById('dots-right');
-// const dotsLeft = document.getElementById('dots-left');
-// const dots = document.getElementById('dots');
+////// слайдер на три кадра///
 
+const getNextEl = () => document.getElementById('right');
+const getPrevEl = () => document.getElementById('left');
+const getSlideEl = () => document.getElementById('slide');
+const getDotsRightEl = () => document.getElementById('dots-right');
+const getDotsLeftEl = () => document.getElementById('dots-left');
+const getDotsEl = () => document.getElementById('dots');
+
+const COLOR = '#919191';
 let count = 1;
-
 
 function showCenterSlide() {
   count = 1;
 
-  document.getElementById('slide').style.
-  backgroundImage = 'url(./assets/image/breather-196132.png)';
+  getSlideEl().style.backgroundImage = 'url(./assets/image/breather-196132.png)';
+  getDotsEl().style.borderColor = '#0099d2';
 
-  document.getElementById('dots').style.borderColor = '#0099d2';
+  getDotsLeftEl().style.borderColor = COLOR;
+  getDotsRightEl().style.borderColor = COLOR;
 
-  document.getElementById('dots-left').style.
-  borderColor = document.getElementById('dots-right').style.
-  borderColor = '#919191';
-
-  document.getElementById('right').style.
-  visibility = document.getElementById('left').style.visibility = 'visible';
+  getNextEl().style.visibility = 'visible';
+  getPrevEl().style.visibility = 'visible';
 }
 
 function showNextSlide() {
   count++;
 
   if (count > 1) {
-    document.getElementById('right').style.visibility = 'hidden';
-
-    document.getElementById('slide').style.
-    backgroundImage = 'url(./assets/image/slide4.jpg)';
-
-    document.getElementById('dots-right').style.borderColor = '#0099d2';
-
-    document.getElementById('dots-left').style.
-    borderColor = document.getElementById('dots').style.
-    borderColor = '#919191';
-
+    getNextEl().style.visibility = 'hidden';
+    getSlideEl().style.backgroundImage = 'url(./assets/image/slide4.jpg)';
+    getDotsRightEl().style.borderColor = '#0099d2';
+    getDotsLeftEl().style.borderColor = COLOR;
+    getDotsEl().style.borderColor = COLOR;
   } else {
     return showCenterSlide();
   }
@@ -48,92 +41,69 @@ function showPrevSlide() {
   count--;
 
   if (count < 1) {
-    document.getElementById('left').style.visibility = 'hidden';
-
-    document.getElementById('slide').style.
-    backgroundImage = 'url(./assets/image/slide5.jpg)';
-
-    document.getElementById('dots-left').style.borderColor = '#0099d2';
-
-    document.getElementById('dots-right').style.
-    borderColor = document.getElementById('dots').style.
-    borderColor = '#919191';
-
+    getSlideEl().style.backgroundImage = 'url(./assets/image/slide5.jpg)';
+    getPrevEl().style.visibility = 'hidden';
+    getDotsLeftEl().style.borderColor = '#0099d2';
+    getDotsRightEl().style.borderColor = COLOR;
+    getDotsEl().style.borderColor = COLOR;
   } else {
     return showCenterSlide();
   }
+  // document.getElementById('slide').className = '';
 }
 
+////////Замена шрифтов в корне///////
 
-
-function changeFontSize10() {
-
-  document.documentElement.style.fontSize = '62.5%';
-
-  document.getElementById('size10').
-  style.backgroundImage = 'url(./assets/icons/activeFontSize.png)';
-
-  document.getElementById('size12').
-  style.backgroundImage = document.getElementById('size14').
-  style.backgroundImage = 'none';
-
-  return;
+function changeFontSize(el, elements) {
+  elements.forEach(el => el.classList.remove('selected-font'));
+  el.classList.add('selected-font');
 }
 
-function changeFontSize12() {
+function changeDocumentFontSizeHandler(fontSize) {
+  return function (e) {
+    e.preventDefault();
+    document.documentElement.style.fontSize = fontSize;
 
-  document.documentElement.style.fontSize = '75%';
-
-  document.getElementById('size12').
-  style.backgroundImage = 'url(./assets/icons/activeFontSize.png)';
-
-  document.getElementById('size10').
-  style.backgroundImage = document.getElementById('size14').
-  style.backgroundImage = 'none';
-
-  return;
+    changeFontSize(e.target, [
+      document.getElementById('size10'),
+      document.getElementById('size12'),
+      document.getElementById('size14')
+    ]);
+  }
 }
 
-function changeFontSize14() {
+window.addEventListener('load', () => {
+  document.getElementById('size10').addEventListener('click', changeDocumentFontSizeHandler('62.5%'));
+  document.getElementById('size12').addEventListener('click', changeDocumentFontSizeHandler('75%'));
+  document.getElementById('size14').addEventListener('click', changeDocumentFontSizeHandler('87.5%'));
+});
 
-  document.documentElement.style.fontSize = '87.5%';
+///////
+//////остановка анимации картинок новостей при загрузке//////
 
-  document.getElementById('size14').
-  style.backgroundImage = 'url(./assets/icons/activeFontSize.png)';
-
-  document.getElementById('size12').
-  style.backgroundImage = document.getElementById('size10').
-  style.backgroundImage = 'none';
-
-  return;
+function toggleOpasityStop(el, elements) {
+  ///// переключение анимации между картинками/////
+  // elements.forEach(el => el.classList.remove('animationStop'));  
+  el.classList.add('animationStop');
 }
 
-window.onload = timerId();
+function toggleOpasityStopHandler() {
+  return function (e) {
+    e.preventDefault();
 
-var timerFull, timerNone;
-
-var opasityFull = '-webkit-transition: all 6s; -webkit-transform: rotateX(0deg); transition: all 6s; opacity: 1; filter: alpha(opacity=100);transform: rotateX(0deg);'
-
-var opacityNone = '-webkit-transition: all 6s; -webkit-transform: rotateX(90deg); transition: all 6s; opacity: 0; filter: alpha(opacity=0); transform: rotateX(90deg);'
-
-function timerId() {
-
-  timerNone = setInterval(function () {
-    document.getElementById('imgNews1').style = opacityNone;
-  }, 6000);
-
-  timerFull = setInterval(function () {
-    document.getElementById('imgNews1').style = opasityFull;
-  }, 12000);
- 
-};
-
-function opasityStop() {
-
-  clearInterval(timerFull);
-  clearInterval(timerNone);
-
-  document.getElementById('imgNews1').style = opasityFull;
-
-  return;
+    toggleOpasityStop(e.target, [
+      document.getElementById('imgNews1'),
+      document.getElementById('imgNews2'),
+      document.getElementById('imgNews3'),
+      document.getElementById('imgNews4')
+    ]);
+  }
 }
+
+window.addEventListener('load', () => {
+  document.getElementById('imgNews1').addEventListener('click', toggleOpasityStopHandler());
+  document.getElementById('imgNews2').addEventListener('click', toggleOpasityStopHandler());
+  document.getElementById('imgNews3').addEventListener('click', toggleOpasityStopHandler());
+  document.getElementById('imgNews4').addEventListener('click', toggleOpasityStopHandler());
+
+});
